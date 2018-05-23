@@ -1,0 +1,40 @@
+
+================================================================================================
+SiteWatcher
+================================================================================================
+SiteWatcher is a simple program that takes a list of websites (stored in sites.txt)
+and monitors each site for changes. If a change occurs on a monitored site,
+SiteWatcher will email the configured address with the site that has changed.
+
+================================================================================================
+Requirements
+================================================================================================
+Python 3.6.x
+A valid gmail address
+A valid App password for the gmail address above (for SiteWatcher to use to send email)
+    https://support.google.com/accounts/answer/185833?hl=en
+
+================================================================================================
+Configuration and Running
+================================================================================================
+Steps:
+
+1. Copy the SiteWatcher folder and all of its contents to a permanent location
+2. Install Python 3.6.x
+3. Create an app password for your gmail account (https://support.google.com/accounts/answer/185833?hl=en)
+4. Enter the app password and email in the place-holders in settings.py
+5. Run the program by entering:
+    python sitewatcher.py <filepath to your list of sites>
+
+================================================================================================
+NOTES
+================================================================================================
+1. There is an example sites.txt file to use as a reference.
+2. The file sitewatcher.db stores the sites, hashes, and last checked timestamp
+3. There should be no third-party requirements for this program (no need to install anything other than Python)
+
+
+
+
+
+
