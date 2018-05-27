@@ -1,7 +1,8 @@
 
 import hashlib
-import urllib.request
+# import urllib
 import datetime
+import requests
 
 
 class BasicPageParser(object):
@@ -20,7 +21,9 @@ class BasicPageParser(object):
         return digest, str(datetime.datetime.now())
 
     def get_site_text(self, url):
-        return urllib.request.urlopen(url).read()
+        r = requests.get(url)
+        return str(r.text).encode('utf-8')
+        # return urllib.request.urlopen(url).read()
 
     # def check_site_meta(self, site_text):
     #     # TODO
